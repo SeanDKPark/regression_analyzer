@@ -1,0 +1,16 @@
+regression_analyzer/
+│
+├── main.py                  # The entry point that launches the application
+├── requirements.txt         # The dependency list for your office setup
+│
+├── ui/                      # Everything the user sees and interacts with
+│   ├── main_window.py       # Connects UI buttons to the Python functions
+│   └── layout.ui            # (Optional but recommended) The Qt Designer drag-and-drop file
+│
+├── core/                    # The quantitative engine (No UI code goes here)
+│   ├── data_handler.py      # Logic for parsing Excel, cleaning NaNs, mapping cell addresses
+│   └── model_engine.py      # The statsmodels logic: running OLS/Lasso, generating diagnostics
+│
+└── utils/                   # Independent helper scripts
+    ├── plotter.py           # Matplotlib/Seaborn functions to generate and format charts
+    └── exporter.py          # Logic to bundle the statistical summary and plots into a final Excel/PDF
